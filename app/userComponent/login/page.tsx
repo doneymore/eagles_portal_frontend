@@ -9,7 +9,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
@@ -19,7 +19,7 @@ export default function LoginPage() {
 
     if (email === "eagleassembly@mail.com" && password === "1234567") {
       // Redirect to home page
-      window.location.href = "/userComponent/home";
+      window.location.href = "/home";
     } else {
       setError("Invalid email or password. Please try again.");
       setIsLoading(false);
